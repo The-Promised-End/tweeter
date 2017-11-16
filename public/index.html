@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="/styles/tweet-feed.css" type="text/css" />
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
-    <script src="/scripts/composer-char-counter.js"</script>
+    <script src="/scripts/composer-char-counter.js"></script>
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
 
@@ -29,26 +29,27 @@
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png" width="80px" height="80px">
       <span class="header">Tweeter</span>
+      <button class = "compose" type = "button">Compose</button>
     </nav>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
     <section class="new-tweet">
      <h2>Compose Tweet</h2>
-     <form id = "create-tweet" action = "/tweets/" method = "POST">
-      <textarea id = "tweet-text" name="text" placeholder="What are you humming about?"></textarea>
-      <input type="submit" value="Tweet">
+     <form id = "create-tweet" action = "/tweets/" method = "POST" name="createTweet">
+      <textarea id = "tweet-text" name="text" placeholder="What are you humming about?" autofocus></textarea>
+      <input type="submit" value="Tweet" id = "submittweet">
       <span class="counter">140</span>
      </form>
     </section>
 
-    <section id = "tweet-list">
-      <article class = "all-tweets">
+    <section id ="tweet-list">
+<!--       <article class = "all-tweets">
         <header class = "headerbox">
           <img class = "avatar" src="/images/bird.png" height="60px" width="60px">
           <div class="user-info">
-            <h1>Bill Hicks</h1>
-            <h2>@Hicks42</h2>
+            <h1 class = "username">Bill Hicks</h1>
+            <h2 class = "user-handle">@Hicks42</h2>
           </div>
         </header>
           <div class = "tweet-body">
@@ -62,8 +63,9 @@
             </div>
             <p>10 days ago</p>
             </footer>
-      </article>
+      </article> -->
     </section>
+
   </main>
 
   </body>
